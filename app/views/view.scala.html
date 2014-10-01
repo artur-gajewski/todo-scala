@@ -1,0 +1,21 @@
+@(tasks: List[Task])
+
+@import helper._
+
+@main("Todo list") {
+
+    <h1>Task #@tasks.head.id</h1>
+
+    <p>
+        @tasks.head.label
+    </p>
+
+    <p>
+        @form(routes.Application.deleteTask(tasks.head.id)) {
+            <input type="submit" value="Delete">
+        }
+    </p>
+
+    <a href="@routes.Application.tasks">Back to task list</a>
+
+}

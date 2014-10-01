@@ -1,0 +1,49 @@
+package models
+
+import anorm._
+import anorm.SqlParser._
+import play.api.db._
+import play.api.Play.current
+import scala.util.Random
+
+case class Task(id: Long, label: String)
+
+object Task {
+
+    val task = {
+        get[Long]("id") ~
+        get[String]("label") map {
+            case id~label => Task(id, label)
+        }
+    }
+
+    def all(): List[Task] = DB.withConnection { implicit c =>
+        SQL("select * from task").as(task *)
+    }
+
+    def findById(id: Long) = DB.withConnection { implicit c =>
+        SQL("select * from task where id = {id}").on(
+            'id -> id
+        ).as(task *)
+    }
+
+    def create(label: String) {
+
+        val shortUrl = Random.alphanumeric.take(7).mkString
+
+        DB.withConnection { implicit c =>
+            SQL("insert into task (label) values ({label})").on(
+                'label -> label
+            ).executeUpdate()
+        }
+    }
+
+    def delete(id: Long) {
+        DB.withConnection { implicit c =>
+            SQL("delete from task where id = {id}").on(
+                'id -> id
+            ).executeUpdate()
+        }
+    }
+
+}

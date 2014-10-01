@@ -1,0 +1,6 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/arturgajewski/workspace/scala/workspace/todolist/conf/application.conf,/Users/arturgajewski/workspace/scala/workspace/todolist/target/scala-2.10/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/arturgajewski/workspace/scala/workspace/todolist/conf/evolutions,/Users/arturgajewski/workspace/scala/workspace/todolist/target/scala-2.10/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/Users/arturgajewski/workspace/scala/workspace/todolist/conf/routes,/Users/arturgajewski/workspace/scala/workspace/todolist/target/scala-2.10/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/arturgajewski/workspace/scala/workspace/todolist/conf/evolutions/default,/Users/arturgajewski/workspace/scala/workspace/todolist/target/scala-2.10/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/Users/arturgajewski/workspace/scala/workspace/todolist/conf/evolutions/default/1.sql,/Users/arturgajewski/workspace/scala/workspace/todolist/target/scala-2.10/classes/evolutions/default/1.sql)[0m
